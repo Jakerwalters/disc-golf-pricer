@@ -4,18 +4,22 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Hardcoded search query for now
 search_query = "Discmania d-line p2"
 
-# Establish chrome driver and go to report site URL
+# Establish headless chrome driver and go to Ebay
+chrome_options = Options()  
+chrome_options.headless = True
+
 url = "https://www.ebay.com/"
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
 driver.get(url)
 
 # Enter search query
-search_box_element = driver.find_element_by_xpath("/html/body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[1]/div[1]/div/input[1]")
+search_box_element = driver.find_element_by_css_selector(".gh-tb.ui-autocomplete-input")
 search_box_element.send_keys(search_query)
 search_box_element.send_keys(Keys.RETURN)
 
