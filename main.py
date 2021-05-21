@@ -47,7 +47,7 @@ for item_element in item_elements:
         pass
 
     # Break before "results matching fewer keywords" items begin, we don't want those
-    if item_element.get_attribute("class") == ".s-item.s-item--watch-at-corner.s-item__before-answer":
+    if "s-item__before-answer" in item_element.get_attribute("class"):
         break
 
 print(item_list)
