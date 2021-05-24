@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 {% block title %}Home Page{% endblock %}
 {% block content %}
-<h1>Home Page Content</h1>
+<h1 class=main-h1>Search For Discs</h1>
+<div class="input-group mb-3 searchbar">
+    <input type="text" class="form-control" placeholder="ex: Discmania d-line p2" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-primary" type="button" id="search-button">Search</button>
+</div>
 {% endblock %}

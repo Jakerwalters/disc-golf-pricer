@@ -1,0 +1,21 @@
+.center {
+    text-align: center;
+}
+
+.main-h1 {
+    text-align: center;
+    padding-top: 1% !important;
+    padding-bottom: 1% !important;
+}
+
+.main-p {
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+}
+
+.searchbar {
+    padding-top: 1% !important;
+    padding-bottom: 1% !important;
+    padding-left: 25% !important;
+    padding-right: 25% !important;
+}
